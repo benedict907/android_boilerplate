@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vip.exam.android_concepts.MainActivity">
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Room with MVVM"
+      android:id="@+id/room_mvvm"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Binding WITH RETROFIT/Dragger"
+        android:id="@+id/mvp_retrofit"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Push Notification"
+        android:id="@+id/notification"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:id="@+id/camera"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragmnet"
+        android:id="@+id/fragment"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SharedPreference"
+        android:id="@+id/SharedPreference"/>
+
+
+
+
+</LinearLayout>

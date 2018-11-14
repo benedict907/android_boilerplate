@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+        <data class ="MyDataBinding">
+            <import type="android.view.View"/>
+
+            <variable
+                name="mainviewmodel"
+            type="com.vip.exam.android_concepts.Dragger_Databinding_MVVM.viewmodel.MainViewModel"/>
+        </data>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vipin.mvvm_vip.view.MainActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:gravity="center"
+    android:textColor="#05acdf"
+     android:text="@{mainviewmodel.sample}"
+       android:onClick="@{ () -> mainviewmodel.OnClickPerform() }"
+    android:id="@+id/data_txt" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/data_txt"
+        android:id="@+id/card_layout"
+        card_view:cardBackgroundColor="@color/cardview_shadow_end_color"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="2dp">
+
+        <!-- android:visibility="@{ mainviewmodel.errorLoading ? View.GONE : View.VISIBLE }"-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/data_list"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:dataListNew="@{ mainviewmodel.mDataList }"/>
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorAccent"
+        android:visibility="@{ mainviewmodel.errorLoading ? View.VISIBLE : View.GONE }"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/no_data_list"
+        android:text="No Data Found"/>
+
+</RelativeLayout>
+
+</layout>
